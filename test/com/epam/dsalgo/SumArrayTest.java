@@ -65,8 +65,6 @@ public class SumArrayTest {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(10000);
         }
-        int sum = Arrays.stream(arr).sum();
-        assertEquals(sum, sumArray.sum(arr));
         assertThrows(StackOverflowError.class, () -> sumArray.sum(arr, arr.length - 1));
     }
 

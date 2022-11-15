@@ -60,6 +60,6 @@ public class BinaryTree {
         int left = longestPath(root.left);
         int right = longestPath(root.right);
         diameterOfBT = Math.max(diameterOfBT, 1 + left + right);
-        return 1 + Math.max(longestPath(root.left), longestPath(root.right));
+        return 1 + Math.max(left, right);
     }
 }

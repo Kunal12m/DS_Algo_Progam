@@ -8,7 +8,10 @@ import java.util.Scanner;
  * EPAM System
  */
 public class BinaryTree {
-    // 5 9 5 -1 -1 8 -1 -1 7 3 -1 -1 1 2 -1 -1 6 -1 -1
+    /**
+     * Tree Input
+     * 5 9 5 -1 -1 8 -1 -1 7 3 -1 -1 1 2 -1 -1 6 -1 -1
+     */
     Scanner scanner;
     int diameterOfBT = 0;
 

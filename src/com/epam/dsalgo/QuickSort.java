@@ -27,9 +27,7 @@ public class QuickSort {
     }
 
     public void quickSort(int[] arr) {
-        if (arr == null) {
-            throw new NoArrayFoundException("No Array Found");
-        }
+        if (arr == null) throw new NoArrayFoundException("No Array Found");
         quickSort(arr, 0, arr.length - 1);
     }
 

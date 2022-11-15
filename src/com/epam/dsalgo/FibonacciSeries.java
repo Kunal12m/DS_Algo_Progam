@@ -27,6 +27,7 @@ public class FibonacciSeries {
     }
 
     public int fibonacciNumber(int n) {
+        if (n < 0) throw new RuntimeException("Number Should be greater then 0");
         if (n == 0) return 0;
         if (n == 1) return 1;
         if (fibonacciCache[n] == 0)

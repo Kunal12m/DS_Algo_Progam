@@ -1,5 +1,7 @@
 package com.epam.dsalgo;
 
+import com.epam.exception.NoArrayFoundException;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -23,6 +25,7 @@ public class MergeSort {
     }
 
     public void mergeSort(int[] arr) {
+        if (arr == null) throw new NoArrayFoundException("No Array Found");
         if (arr.length < 2) return;
         int length = arr.length;
         int half = length / 2;

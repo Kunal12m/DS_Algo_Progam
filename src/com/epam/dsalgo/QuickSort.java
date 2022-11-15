@@ -1,5 +1,7 @@
 package com.epam.dsalgo;
 
+import com.epam.exception.NoArrayFoundException;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -25,6 +27,9 @@ public class QuickSort {
     }
 
     public void quickSort(int[] arr) {
+        if (arr == null) {
+            throw new NoArrayFoundException("No Array Found");
+        }
         quickSort(arr, 0, arr.length - 1);
     }
 
@@ -43,8 +48,7 @@ public class QuickSort {
             while (arr[pivot] >= arr[left] && left < right) left++;
             while (arr[pivot] <= arr[right] && left < right) right--;
 
-            if (left != right)
-                swap(arr, left, right);
+            if (left != right) swap(arr, left, right);
         }
         swap(arr, right, pivot);
         return right;

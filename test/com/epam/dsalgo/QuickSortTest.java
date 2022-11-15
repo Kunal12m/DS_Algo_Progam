@@ -1,5 +1,6 @@
 package com.epam.dsalgo;
 
+import com.epam.exception.NoArrayFoundException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Created by Kunal Mukherjee on 15-11-2022.
@@ -52,5 +54,10 @@ public class QuickSortTest {
         int[] inputArr = new int[0];
         quickSort.quickSort(inputArr);
         assertArrayEquals(new int[0], inputArr);
+    }
+    @Test
+    @DisplayName("quickSort Method With Null Input Array")
+    public void quickSort_method_with_Null_input_array() {
+        assertThrows(NoArrayFoundException.class, () -> quickSort.quickSort(null));
     }
 }

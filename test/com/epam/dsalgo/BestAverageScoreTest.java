@@ -1,11 +1,13 @@
 package com.epam.dsalgo;
 
+import com.epam.exception.NoArrayFoundException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Created by Kunal Mukherjee on 16-11-2022.
@@ -43,5 +45,12 @@ public class BestAverageScoreTest {
         score = new String[0][0];
         assertEquals(0, bestAverageScore.bestAverageGrade(score));
     }
+
+    @Test
+    @DisplayName("bestAverageGrade Method Should Return Exception When Input Is null")
+    public void best_average_grade_method_should_return_Exception_when_input_is_null() {
+        assertThrows(NoArrayFoundException.class, () -> bestAverageScore.bestAverageGrade(null));
+    }
+
 
 }

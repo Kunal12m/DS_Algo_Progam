@@ -1,5 +1,7 @@
 package com.epam.dsalgo;
 
+import com.epam.exception.NoArrayFoundException;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +30,7 @@ public class BestAverageScore {
     }
 
     public int bestAverageGrade(String[][] scores) {
+        if (scores == null) throw new NoArrayFoundException("Provide a String array of arrays");
         if (scores.length == 0) return 0;
         Map<String, String> map = new HashMap<>();
         for (String[] s : scores) {

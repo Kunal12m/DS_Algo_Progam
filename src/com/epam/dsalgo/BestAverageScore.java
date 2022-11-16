@@ -22,13 +22,12 @@ public class BestAverageScore {
      */
     public static void main(String[] args) {
 
-//        String[][] scores = new String[][]{{"Bobby", "87"}, {"Charles", "100"}, {"Eric", "64"}, {"Charles", "22"}};
         String[][] scores = new String[][]{{"Sarah", "91"}, {"Goldie", "92"}, {"Elaine", "93"}, {"Elaine", "95"}, {"Goldie", "94"}, {"Sarah", "93"}};
-
-        System.out.println(bestAverageGrade(scores));
+        BestAverageScore bas = new BestAverageScore();
+        System.out.println(bas.bestAverageGrade(scores));
     }
 
-    public static int bestAverageGrade(String[][] scores) {
+    public int bestAverageGrade(String[][] scores) {
         Map<String, String> map = new HashMap<>();
         for (String[] s : scores) {
             if (!map.containsKey(s[0])) map.put(s[0], s[1]);

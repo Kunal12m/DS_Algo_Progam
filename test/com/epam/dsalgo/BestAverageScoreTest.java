@@ -52,5 +52,4 @@ public class BestAverageScoreTest {
         assertThrows(NoArrayFoundException.class, () -> bestAverageScore.bestAverageGrade(null));
     }
 
-
 }

@@ -15,10 +15,19 @@ public class ComputePower {
         int n = random.nextInt(10);
         System.out.printf("Compute %d power of %d\n", a, n);
         System.out.println(cp.power(a, n));
+        System.out.println(cp.newPower(a, n));
     }
 
     public double power(int a, int n) {
         if (n <= 0) return 1;
         return a * power(a, n - 1);
+    }
+
+    public double newPower(int a, int n) {
+        if (n <= 0) return 1;
+        if ((n & 1) == 0)
+            return newPower(a, n / 2) * newPower(a, n / 2);
+        else
+            return a * newPower(a, (n - 1) / 2) * newPower(a, (n - 1) / 2);
     }
 }

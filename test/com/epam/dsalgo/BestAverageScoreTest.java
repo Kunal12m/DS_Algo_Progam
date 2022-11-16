@@ -37,4 +37,11 @@ public class BestAverageScoreTest {
         assertEquals(87, bestAverageScore.bestAverageGrade(score));
     }
 
+    @Test
+    @DisplayName("bestAverageGrade Method Should Return 0 When Input Is Empty")
+    public void best_average_grade_method_should_return_0_when_input_is_empty() {
+        score = new String[0][0];
+        assertEquals(0, bestAverageScore.bestAverageGrade(score));
+    }
+
 }

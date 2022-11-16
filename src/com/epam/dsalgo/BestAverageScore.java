@@ -28,6 +28,7 @@ public class BestAverageScore {
     }
 
     public int bestAverageGrade(String[][] scores) {
+        if (scores.length == 0) return 0;
         Map<String, String> map = new HashMap<>();
         for (String[] s : scores) {
             if (!map.containsKey(s[0])) map.put(s[0], s[1]);

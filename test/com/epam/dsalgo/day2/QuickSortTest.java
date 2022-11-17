@@ -1,4 +1,4 @@
-package com.epam.dsalgo;
+package com.epam.dsalgo.day2;
 
 import com.epam.exception.NoArrayFoundException;
 import org.junit.jupiter.api.BeforeAll;

@@ -1,4 +1,4 @@
-package com.epam.dsalgo;
+package com.epam.dsalgo.day3;
 
 /**
  * Created by Kunal Mukherjee on 17-11-2022.

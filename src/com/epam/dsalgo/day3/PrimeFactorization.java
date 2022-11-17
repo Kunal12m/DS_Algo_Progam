@@ -1,4 +1,4 @@
-package com.epam.dsalgo;
+package com.epam.dsalgo.day3;
 
 import java.util.ArrayList;
 import java.util.Arrays;

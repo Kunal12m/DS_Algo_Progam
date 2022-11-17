@@ -1,4 +1,4 @@
-package com.epam.dsalgo;
+package com.epam.dsalgo.day1;
 
 import com.epam.exception.NoArrayFoundException;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Created by Kunal Mukherjee on 09-11-2022.

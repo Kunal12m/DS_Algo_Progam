@@ -190,7 +190,7 @@
     }
    ```
    ```
-   Ans:- O(nlogn)
+   Ans:- O(n)
    ```
 
 </details>
@@ -255,7 +255,7 @@
     }
     ```
     ```
-    Ans:- O(n^2)
+    Ans:- O(n)
     ```
 
 </details>

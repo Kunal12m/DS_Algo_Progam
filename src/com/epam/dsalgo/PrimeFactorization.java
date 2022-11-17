@@ -17,20 +17,20 @@ public class PrimeFactorization {
     }
 
     public int[] primeFactorization(int x) {
-        List<Integer> primeFactor = new ArrayList<>();
+        List<Integer> primeFactors = new ArrayList<>();
         for (int i = 2; i < Math.sqrt(x); i++) {
             while ((x % i) == 0) {
-                primeFactor.add(i);
+                primeFactors.add(i);
                 x /= i;
             }
         }
         int[] ints;
         if (x > 2) {
-            ints = new int[primeFactor.size() + 1];
-            ints[primeFactor.size()] = x;
-        } else ints = new int[primeFactor.size()];
+            ints = new int[primeFactors.size() + 1];
+            ints[primeFactors.size()] = x;
+        } else ints = new int[primeFactors.size()];
         int k = 0;
-        for (Integer integer : primeFactor) {
+        for (Integer integer : primeFactors) {
             ints[k++] = integer;
         }
         return ints;

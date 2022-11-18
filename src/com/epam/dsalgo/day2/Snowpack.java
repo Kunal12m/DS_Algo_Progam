@@ -17,26 +17,19 @@ public class Snowpack {
     }
 
     public int countSnowUnit(int[] input) {
-        List<Integer> arr = Arrays.stream(input).boxed().collect(Collectors.toList());
-        int max = arr.get(0);
-        int ans = 0;
-        int pre = arr.get(0);
-        int curr;
-        int length = -1;
-        for (int i = 1; i < arr.size(); i++) {
-            curr = arr.get(i);
-            if (curr >= max) {
-                int temp = curr;
-                max = curr;
-                curr = temp;
-            } else
-                length++;
-            if (length >= 1 && arr.get(i) != 0)
-                ans = ans + curr - 1 + length - pre;
-            if (max == arr.get(i)) length = -1;
-            pre = arr.get(i);
-        }
+        int left = 0, right = input.length - 1;
+        int sum = 0;
+        int leftMax = 0, rightMax = 0;
 
-        return ans;
+        while (left <= right) {
+            leftMax = Math.max(input[left], leftMax);
+            rightMax = Math.max(input[right], rightMax);
+            if (leftMax < rightMax) {
+                sum += leftMax - input[left++];
+            } else {
+                sum += rightMax - input[right--];
+            }
+        }
+        return sum;
     }
 }

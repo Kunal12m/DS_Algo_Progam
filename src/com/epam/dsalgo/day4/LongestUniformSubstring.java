@@ -11,7 +11,7 @@ public class LongestUniformSubstring {
 
     public static void main(String[] args) {
         LongestUniformSubstring lus = new LongestUniformSubstring();
-        System.out.println(Arrays.toString(lus.getLongestRepeatingSubString("aabbbbbCdAA")));
+        System.out.println(Arrays.toString(lus.getLongestRepeatingSubString("aabbbaa")));
     }
 
     public int[] getLongestRepeatingSubString(String s) {
@@ -24,9 +24,9 @@ public class LongestUniformSubstring {
             if (s.charAt(i) != s.charAt(i - 1)) {
                 if (maxLength < length) {
                     maxLength = length;
-                    length = 0;
                     start = pre;
                 }
+                length = 0;
                 pre = i;
             }
             length++;

@@ -13,17 +13,17 @@ import java.util.stream.Collectors;
 public class FirstNonRepeatingCharacter {
 
     public static void main(String[] args) {
-        String s = "apple";
+        String s = "xxyyzz";
         FirstNonRepeatingCharacter repeatingCharacter = new FirstNonRepeatingCharacter();
         System.out.println(repeatingCharacter.findFirstNonRepeatingCharacter(s));
     }
 
     public char findFirstNonRepeatingCharacter(String input) {
         if (input == null) throw new RuntimeException("No String Found");
-        if (input.length() == 0) return ' ';
+        if (input.length() == 0) return '0';
         return input.chars().mapToObj(e -> (char) e)
                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
                 .entrySet().stream().filter(e -> e.getValue() == 1L)
-                .map(Map.Entry::getKey).findFirst().get();
+                .map(Map.Entry::getKey).findFirst().orElse('0');
     }
 }

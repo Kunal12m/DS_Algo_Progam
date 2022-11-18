@@ -1,7 +1,5 @@
 package com.epam.dsalgo.day4;
 
-import java.util.Arrays;
-
 /**
  * Created by Kunal Mukherjee on 18-11-2022.
  * Kunal_Mukherjee@epam.com

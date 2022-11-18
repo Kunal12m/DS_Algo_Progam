@@ -1,9 +1,5 @@
 package com.epam.dsalgo.day2;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * Created by Kunal Mukherjee on 18-11-2022.
  * Kunal_Mukherjee@epam.com

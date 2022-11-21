@@ -1,7 +1,6 @@
 package com.epam.dsalgo.day5;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * Created by Kunal Mukherjee on 21-11-2022.
